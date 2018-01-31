@@ -1,0 +1,26 @@
+
+  <h1>
+      Welcome to {{title}}!
+    </h1>
+    <br>
+    {{ create }}
+    
+        
+    <div class="fm" *ngIf="counter1">
+    <h3>Enter your details : </h3><br><br>
+    First Name: <input type="text" name="fn" [(ngModel)]="fn" required><br><br>
+    Last Name: <input type="text"  name="ln" [(ngModel)]="ln" required><br><br>
+    Date of Birth: <input type="date" [(ngModel)]="dob" required><br><br>
+    <input class="button" value="Submit"  (click)=display()>
+    </div>
+    
+    <br><br>
+    <div *ngIf="counter">
+    <h4>First Name is {{ fn }}</h4><br>
+    <h4>Last Name is {{ ln }}</h4><br>
+    <h4>Date of Birth is {{ dob }}</h4>
+    <br><br>
+    <input class="button" value="Confirm" (click)=confirm()><br><br>
+    <input class="button" value="Change" (click)=change()>
+    </div>
+  
